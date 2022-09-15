@@ -6,3 +6,5 @@ Storage for Code running personal Website
 
 Built using Frelancer Theme: https://jekyllthemes.io/theme/freelancer-theme
 Ruby, Javascript, Html
+
+Credit: https://github.com/jeromelachaud/freelancer-theme
