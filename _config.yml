@@ -32,24 +32,24 @@ color:
 
 # Footer settings
 footer:
-  copyright: Dr. Henry Jekyll
+  copyright: Sarah Bass
   location: Location
-  social: Around the Web
-  credits: Credits
+  social: Around The Web
+  credits: 
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  - title: Android Google Play
+  - title: google-plus
     url:https://play.google.com/store/apps/dev?id=8905289373249083173
-  - title: Instagram
+  - title: instagram
     url: https://www.instagram.com/koonchki/?hl=en
   - title: github
     url: https://github.com/SarahBass
   - title: Fitbit Developer
     url: https://gallery.fitbit.com/developer/850971bc-7265-471f-81f9-608d179f4ddd
-  - title: Leetcode
+  - title: leetcode
     url: 
-  - title: Linkedin
+  - title: linkedin
     url: 
 
 
@@ -59,7 +59,7 @@ address:
   - line: California
 
 # Credits content
-credits: '<a href="http://startbootstrap.com">Start Bootstrap</a>'
+credits: https://github.com/jeromelachaud/freelancer-theme
 
 # Build settings
 markdown: kramdown
