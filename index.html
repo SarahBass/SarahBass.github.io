@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 
 <html>
+<body onload="startTime()">	
 <head>
 <script>
 function startTime() {
     var today = new Date();
     var h = today.getHours();
     var m = today.getMinutes();
+    var s = today.getSeconds();	
     var d = today.getDate();
     var w = today.getDay();
-    var day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     m = checkTime(m);
-    
+     s = checkTime(s);
     // Format for 12-hour clock instead of default 24-hour clock.
     // Remove these two lines for 24-hour clock.
     var sep = getSep(h);  // use sep to indicate am/pm.
@@ -29,7 +31,8 @@ function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
 }
-	</script></head>
+	</script>
+	</head>
 	<head>
 <title></title>
 <meta content="summary_large_image" name="twitter:card"/>
