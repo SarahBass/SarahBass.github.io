@@ -1,39 +1,10 @@
 <!DOCTYPE html>
-
 <html>
-<body onload="startTime()">	
-<head>
-<script>
-function startTime() {
-    var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();	
-    var d = today.getDate();
-    var w = today.getDay();
-    var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    m = checkTime(m);
-     s = checkTime(s);
-    // Format for 12-hour clock instead of default 24-hour clock.
-    // Remove these two lines for 24-hour clock.
-    var sep = getSep(h);  // use sep to indicate am/pm.
-    if (h > 12) {h -= 12};  // use 12-hour clock
-    if (h == 0) {h = 12};
-    
-    var theTime = h + sep + m
-    var theDate = day[w] + '&nbsp;' + d
-    
-    document.getElementById('text').innerHTML = theTime;
-    document.getElementById('date').innerHTML = theDate;
-    var t = setTimeout(startTime, 1000);  // 1-sec repeat
-}
-function checkTime(i) {
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-    return i;
-}
-	</script>
-	</head>
 	<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+	<body>
 <title></title>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="website" property="og:type"/>
@@ -671,10 +642,15 @@ function checkTime(i) {
 </div>
 </div>
 <div class="bee-col bee-col-3 bee-col-w6">
-<div class="bee-block bee-block-1 bee-image"><img alt="Hero Image" class="bee-center bee-autowidth" src="images/Tic.png" style="max-width:412px;"/></div>
+<div class="bee-block bee-block-1 bee-image"><img alt="Hero Image" class="bee-center bee-autowidth" src="images/Tic.png" style="max-width:412px;"/></div>	
 </div>
 </div>
 </div>
+    <div id="clockContainer">
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+    </div>	
 <div class="bee-row bee-row-5">
 <div class="bee-row-content">
 <div class="bee-col bee-col-1 bee-col-w12">
