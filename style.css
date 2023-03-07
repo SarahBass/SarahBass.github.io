@@ -1,0 +1,39 @@
+#clockContainer {
+	position: relative;
+	margin: auto;
+	height: 40vw;
+	/*to make the height and width responsive*/
+	width: 40vw;
+	background: url(https://raw.githubusercontent.com/SarahBass/SarahBass.github.io/main/images/Tic.png) no-repeat;
+	/*setting our background image*/
+	background-size: 100%;
+}
+
+#hour,
+#minute,
+#second {
+	position: absolute;
+  
+	transform-origin: center;
+  	height: 40vw;
+
+	  width: 40vw;    
+}
+
+#hour {
+  background: url(https://raw.githubusercontent.com/SarahBass/SarahBass.github.io/main/images/hour.png);
+  background-size: 100%;
+	opacity: 0.8;
+}
+
+#minute {
+    background: url(https://github.com/SarahBass/SarahBass.github.io/blob/main/images/minute.png?raw=true);
+  background-size: 100%;
+	opacity: 0.8;
+}
+
+#second {
+    background: url(https://github.com/SarahBass/SarahBass.github.io/blob/main/images/second.png?raw=true);
+  background-size: 100%;
+	opacity: 0.8;
+}
