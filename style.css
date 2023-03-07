@@ -11,7 +11,8 @@
 
 #hour,
 #minute,
-#second {
+#second,
+#star{
 	position: absolute;
   
 	transform-origin: center;
