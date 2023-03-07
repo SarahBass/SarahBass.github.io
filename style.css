@@ -21,7 +21,7 @@
 }
 
 #hour {
-  background: url(https://raw.githubusercontent.com/SarahBass/SarahBass.github.io/main/images/hourstar.png);
+  background: url(https://raw.githubusercontent.com/SarahBass/SarahBass.github.io/main/images/hour.png);
   background-size: 100%;
 	opacity: 0.8;
 }
@@ -36,4 +36,9 @@
     background: url(https://github.com/SarahBass/SarahBass.github.io/blob/main/images/second.png?raw=true);
   background-size: 100%;
 	opacity: 0.8;
+	
+#star {
+    background: url(https://github.com/SarahBass/SarahBass.github.io/blob/main/images/3star1.png?raw=true);
+  background-size: 100%;
+	opacity: 1.0;	
 }
