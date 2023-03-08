@@ -10,6 +10,16 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
 
 const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
+   // 0 => New Moon
+    // 1 => Waxing Crescent Moon
+    // 2 => Quarter Moon
+    // 3 => Waxing Gibbous Moon
+    // 4 => Full Moon
+    // 5 => Waning Gibbous Moon
+    // 6 => Last Quarter Moon
+    // 7 => Waning Crescent Moon
+const moonNames = ['New Moon','Waxing Crescent Moon','Quarter Moon','Waxing Gibbous Moon','Full Moon','Waning Gibbous Moon','Last Quarter Moon','Waning Crescent Moon'];
+
 setInterval(() => {
     
     d = new Date(); //object of date()
@@ -66,6 +76,38 @@ setInterval(() => {
     }
     
     
+    function getMoonPhase(year, month, day)
+{
+    var c = e = jd = b = 0;
+
+    if (month < 3) {
+        year--;
+        month += 12;
+    }
+
+    ++month;
+
+    c = 365.25 * year;
+
+    e = 30.6 * month;
+
+    jd = c + e + day - 694039.09; //jd is total days elapsed
+
+    jd /= 29.5305882; //divide by the moon cycle
+
+    b = parseInt(jd); //int(jd) -> b, take integer part of jd
+
+    jd -= b; //subtract integer part to leave fractional part of original jd
+
+    b = Math.round(jd * 8); //scale fraction from 0-8 and round
+
+    if (b >= 8 ) {
+        b = 0; //0 and 8 are the same so turn 8 into 0
+    }
+    
+    return b;
+}
+    
     function getAlmanac(){
     
      if (month == 0){ return "Wolf Moon";}
@@ -92,13 +134,14 @@ setInterval(() => {
     second.style.transform = `rotate(${sec_rotation}deg)`;
     
 //Button to control Clock
-if (buttonnumber > 3){buttonnumber=0;}
+if (buttonnumber > 4){buttonnumber=0;}
     
 button.onclick = function() {
   buttonnumber += 1;
   if (buttonnumber ==1){button.innerHTML = "Almanac: "+ getAlmanac();}
   else if (buttonnumber ==2){button.innerHTML = "Zodiac: "+getHoroscope();}
   else if (buttonnumber ==3){button.innerHTML = "Today is "+dayNames[week]+ " , "+ monthNames[month] + " "+ day + ", "+ year}
+  else if (buttonnumber ==4){button.innerHTML = "Moon Phase: "+ moonNames[getMoonPhase(year, month, day)];}
   else{button.innerHTML = "Clock Showing :  <"+ hr + ":"+ min+ ":"+sec+">" ;}
 };
 
@@ -113,7 +156,7 @@ button.onclick = function() {
      
      if (sec%2==0){star.style.backgroundImage= "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/copyright"+ month +".png?raw=true')";}
      else{star.style.backgroundImage= "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/copyright"+ month +"s1.png?raw=true')";}}}
-     
+   if (buttonnumber == 4){star.style.backgroundImage= "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/moon"+getMoonPhase(year, month, day) + ".png?raw=true')";}   
     else{
    star.style.backgroundImage= "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/"+min%10+"star"+sec%2+".png?raw=true')";}
    
