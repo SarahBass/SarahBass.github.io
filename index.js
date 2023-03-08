@@ -140,8 +140,8 @@ button.onclick = function() {
   buttonnumber += 1;
   if (buttonnumber ==1){button.innerHTML = "Almanac: "+ getAlmanac();}
   else if (buttonnumber ==2){button.innerHTML = "Zodiac: "+getHoroscope();}
-  else if (buttonnumber ==3){button.innerHTML = "Today is "+dayNames[week]+ " , "+ monthNames[month] + " "+ day + ", "+ year}
-  else if (buttonnumber ==4){button.innerHTML = "Moon Phase: "+ moonNames[getMoonPhase(year, month, day)];}
+  else if (buttonnumber ==3){button.innerHTML = "Today is "+dayNames[week]+ " , "+ monthNames[month] + " "+ day + ", "+ year;}
+  else if (buttonnumber == 4){button.innerHTML = "Moon Phase: "+ moonNames[getMoonPhase(year, month, day)];}
   else{button.innerHTML = "Clock Showing :  <"+ hr + ":"+ min+ ":"+sec+">" ;}
 };
 
@@ -156,7 +156,9 @@ button.onclick = function() {
      
      if (sec%2==0){star.style.backgroundImage= "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/copyright"+ month +".png?raw=true')";}
      else{star.style.backgroundImage= "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/copyright"+ month +"s1.png?raw=true')";}}}
-   if (buttonnumber == 4){star.style.backgroundImage= "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/moon"+getMoonPhase(year, month, day) + ".png?raw=true')";}   
+
+   else if (buttonnumber == 4){star.style.backgroundImage= "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/moon"+ getMoonPhase(year, month, day) + ".png?raw=true')";}   
+
     else{
    star.style.backgroundImage= "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/"+min%10+"star"+sec%2+".png?raw=true')";}
    
