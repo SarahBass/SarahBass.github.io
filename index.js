@@ -22,14 +22,31 @@ setInterval(() => {
 
 
     function getHoroscope() {
-    return "Aries";
+    if (month == 0){ 
+    if (day>0||day<19){return "Capricorn";}
+    else {return"Aquarius"; }
+    }
+    else if(month == 1){
+    if (day>1||day<18){return "Capricorn";}
+    else {return "Pisces"; }
+    }
+    else if(month == 2){
+    if (day>1||day<20){return "Pisces";}
+    else {return "Aries"; }
+    }
+    else if(month == 3){
+    if (day>1||day<19){return "Aries";}
+    else {return "Taurus"; }
+    }
+    else if(month == 4){return "Taurus"; }
+    
+    else{return "Aries";}
     }
     
     
     function getAlmanac(){
     
      if (month == 0){ return "Wolf Moon";}
-     
     else if (month == 1){ return "Snow Moon";}
     else if (month == 2){ return "Worm Moon";}
     else if (month == 3){ return " Pink Moon";}
