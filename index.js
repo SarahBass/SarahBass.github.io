@@ -102,7 +102,11 @@ button.onclick = function() {
 
     if (buttonnumber == 1){star.style.backgroundImage= "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/"+ month+ ".png?raw=true')";}
     else if(buttonnumber == 2){star.style.backgroundImage= "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/"+ astro +".png?raw=true')";}
-     else if(buttonnumber == 3){star.style.backgroundImage= "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/copyright"+ month +".png?raw=true')";}
+     else if(buttonnumber == 3){
+     
+     if (sec%2==0){star.style.backgroundImage= "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/copyright"+ month +".png?raw=true')";}
+     else{star.style.backgroundImage= "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/copyright"+ month +"s1.png?raw=true')";}}
+     
     else{
    star.style.backgroundImage= "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/"+min%10+"star"+sec%2+".png?raw=true')";}
    
