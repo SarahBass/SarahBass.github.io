@@ -1,6 +1,8 @@
+window.onload = function(){ 
+
 var buttonnumber=0;
 
-var button = document.getElementById("clickme")
+var button = document.getElementById("clickme");
 
 const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
@@ -118,3 +120,4 @@ button.onclick = function() {
   //end of interval 
 
 }, 1000);
+};
