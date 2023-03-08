@@ -1,5 +1,7 @@
 var buttonnumber=0;
+
 var button = document.getElementById("clickme")
+
 const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
@@ -18,8 +20,6 @@ setInterval(() => {
     week = d.getDay();
     astro = getHoroscope();
     
-
-
 
     function getHoroscope() {
     if (month == 0){ 
@@ -80,24 +80,32 @@ setInterval(() => {
     else if (month == 11){ return "Cold Moon";}else {return "Moon";}
     }
     
+    //Time Functions
+    
     hr_rotation = 30 * hr + min / 2; //converting current time
     min_rotation = 6 * min;
     sec_rotation = 6 * sec;
-    if (buttonnumber > 2){buttonnumber=0;}
+     hour.style.transform = `rotate(${hr_rotation}deg)`;
+    minute.style.transform = `rotate(${min_rotation}deg)`;
+    second.style.transform = `rotate(${sec_rotation}deg)`;
     
-
+//Button to control Clock
+if (buttonnumber > 3){buttonnumber=0;}
+    
 button.onclick = function() {
   buttonnumber += 1;
   if (buttonnumber ==1){button.innerHTML = "Almanac: "+ getAlmanac();}
   else if (buttonnumber ==2){button.innerHTML = "Zodiac: "+getHoroscope();}
-  else{button.innerHTML = "Clock Showing : "+ dayNames[week]+ " , "+ monthNames[month] + " "+ day + ", "+ year + "  Time Stamp : <"+ hr + ":"+ min+ ":"+sec+">" ;}
+  else if (buttonnumber ==3){button.innerHTML = "Today is "+dayNames[week]+ " , "+ monthNames[month] + " "+ day + ", "+ year}
+  else{button.innerHTML = "Clock Showing :  <"+ hr + ":"+ min+ ":"+sec+">" ;}
 };
 
     if (buttonnumber == 1){star.style.backgroundImage= "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/"+ month+ ".png?raw=true')";}
     else if(buttonnumber == 2){star.style.backgroundImage= "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/"+ astro +".png?raw=true')";}
+     else if(buttonnumber == 3){star.style.backgroundImage= "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/copyright"+ month +".png?raw=true')";}
     else{
    star.style.backgroundImage= "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/"+min%10+"star"+sec%2+".png?raw=true')";}
-    hour.style.transform = `rotate(${hr_rotation}deg)`;
-    minute.style.transform = `rotate(${min_rotation}deg)`;
-    second.style.transform = `rotate(${sec_rotation}deg)`;
+   
+  //end of interval 
+
 }, 1000);
