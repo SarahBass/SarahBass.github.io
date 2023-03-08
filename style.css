@@ -1,12 +1,13 @@
 #clockContainer {
 	position: relative;
 	margin: auto;
-	height: 40vw;
+	height: 70vw;
 	/*to make the height and width responsive*/
-	width: 40vw;
+	width: 70vw;
 	background: url(https://raw.githubusercontent.com/SarahBass/SarahBass.github.io/main/images/Tic.png) no-repeat;
 	/*setting our background image*/
-	background-size: 100%;
+	background-size: contain;
+  
 }
 
 #hour,
@@ -14,33 +15,36 @@
 #second,
 #star{
 	position: absolute;
-  
+  background-repeat: no-repeat;
 	transform-origin: center;
-  	height: 40vw;
-
-	  width: 40vw;    
+  	height: 70vw;
+	  width: 70vw; 
+    
 }
 
 #hour {
   background: url(https://raw.githubusercontent.com/SarahBass/SarahBass.github.io/main/images/hour.png);
-  background-size: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
 	opacity: 0.8;
 }
 
 #minute {
     background: url(https://github.com/SarahBass/SarahBass.github.io/blob/main/images/minute.png?raw=true);
-  background-size: 100%;
+  background-size: contain;
 	opacity: 0.8;
+  background-repeat: no-repeat;
 }
 
 #second {
     background: url(https://github.com/SarahBass/SarahBass.github.io/blob/main/images/second.png?raw=true);
-  background-size: 100%;
+  background-size: contain;
 	opacity: 0.8;
+  background-repeat: no-repeat;
 }
 #star {
     background: url(https://github.com/SarahBass/SarahBass.github.io/blob/main/images/3star1.png?raw=true);
-  background-size: 100%;
-  
+  background-size: contain;
+  background-repeat: no-repeat;
 	
   }
