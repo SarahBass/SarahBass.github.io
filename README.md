@@ -21,6 +21,6 @@ Holiday Message
 
 Moon Phase
 
-Please do not copy art - all "Virtual Star" art is in process of copyright protection. 
+ 2022 - 2023 © Sarah Bass  All Rights Reserved
 
 
