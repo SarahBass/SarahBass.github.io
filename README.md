@@ -19,6 +19,8 @@ Analog Clock
 
 Holiday Message
 
+Moon Phase
+
 Please do not copy art - all "Virtual Star" art is curretly in process of copyright protection. 
 
 
