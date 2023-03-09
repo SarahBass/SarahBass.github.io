@@ -479,9 +479,9 @@ window.onload = function() {
         return "Happy New Year!";
       } else if (month == 6 && day == 4) {
         return "Happy Fourth of July!";
-      } else if (month == 5 && day == 4) {
+      } else if (month == 4 && day == 4) {
         return "May the 4th be with you!";
-      } else if (month == 3 && day == 17) {
+      } else if (month == 2 && day == 17) {
         return "Happy St. Patrick's Day!";
       } else if ((year) == 2022 && month == 11 && (day > 18 && day < 23)) {
         return "Happy Hanukkah!";
