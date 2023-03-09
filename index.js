@@ -1,8 +1,14 @@
 window.onload = function() {
 
   var buttonnumber = 0;
-
+ var buttonMonthnumber = 0;
+  var buttonYearnumber = 0;
+   var buttonDaynumber = 0;
   var button = document.getElementById("clickme");
+   var buttonM = document.getElementById("clickMonth");
+ var buttonD = document.getElementById("clickDay");
+ var buttonY = document.getElementById("clickYear");
+
 
   const monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
@@ -31,7 +37,10 @@ window.onload = function() {
     year = d.getFullYear();
     week = d.getDay();
     astro = getHoroscope();
-
+    Daynumber = buttonDaynumber+day;
+    Monthnumber = buttonMonthnumber+month+1;
+    Yearnumber =  buttonYearnumber+year;
+    
 
     function getHoroscope() {
       if (month == 0) {
@@ -681,6 +690,37 @@ window.onload = function() {
     if (buttonnumber > 5) {
       buttonnumber = 0;
     }
+    
+
+        //Button to control Clock
+    if (Daynumber > 26) {
+      buttonDaynumber = 0;
+    }
+    
+        //Button to control Clock
+    if (Monthnumber > 11) {
+      buttonMonthnumber = 0;
+    }
+    
+        //Button to control Clock
+    if (Yearnumber > 2029) {
+      buttonYearnumber = 0;
+    }
+
+buttonM.onclick = function() {
+      buttonMonthnumber += 1;
+      buttonM.innerHTML = Monthnumber;
+     };
+
+buttonD.onclick = function() {
+      buttonDaynumber += 1;
+      buttonD.innerHTML = Daynumber;
+     };
+
+buttonY.onclick = function() {
+      buttonYearnumber += 1;
+      buttonY.innerHTML = Yearnumber;
+     };
 
     button.onclick = function() {
       buttonnumber += 1;
