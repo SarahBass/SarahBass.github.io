@@ -1,5 +1,5 @@
 #clockContainer {
-	position: relative;
+	position: absolute;
 	margin: auto;
 	height: 70vw;
 	/*to make the height and width responsive*/
