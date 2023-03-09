@@ -105,7 +105,7 @@ window.onload = function() {
         } else {
           return "Sagittarius";
         }
-      } else if (month == 12) {
+      } else if (month == 11) {
         if (day > 1 || day < 21) {
           return "Sagittarius";
         } else {
