@@ -1,13 +1,13 @@
 window.onload = function() {
 
   var buttonnumber = 0;
- var buttonMonthnumber = 0;
+  var buttonMonthnumber = 0;
   var buttonYearnumber = 0;
-   var buttonDaynumber = 0;
+  var buttonDaynumber = 0;
   var button = document.getElementById("clickme");
-   var buttonM = document.getElementById("clickMonth");
- var buttonD = document.getElementById("clickDay");
- var buttonY = document.getElementById("clickYear");
+  var buttonM = document.getElementById("clickMonth");
+  var buttonD = document.getElementById("clickDay");
+  var buttonY = document.getElementById("clickYear");
 
 
   const monthNames = ["January", "February", "March", "April", "May", "June",
@@ -32,15 +32,15 @@ window.onload = function() {
     hr = d.getHours();
     min = d.getMinutes();
     sec = d.getSeconds();
-    month = d.getMonth()+buttonMonthnumber;
-    day = d.getDate()+buttonDaynumber;
-    year = d.getFullYear()+buttonYearnumber;
+    month = d.getMonth() + buttonMonthnumber;
+    day = d.getDate() + buttonDaynumber;
+    year = d.getFullYear() + buttonYearnumber;
     week = d.getDay();
     astro = getHoroscope();
-     buttonY.innerHTML = year - 2000;
-     buttonD.innerHTML = (day);
-     buttonM.innerHTML = (month+1);
-    
+    buttonY.innerHTML = year - 2000;
+    buttonD.innerHTML = (day);
+    buttonM.innerHTML = (month + 1);
+
 
     function getHoroscope() {
       if (month == 0) {
@@ -483,7 +483,11 @@ window.onload = function() {
         return "May the 4th be with you!";
       } else if (month == 2 && day == 17) {
         return "Happy St. Patrick's Day!";
-      } else if ((year) == 2022 && month == 11 && (day > 18 && day < 23)) {
+      } else if (month == 4 && day == 5) {
+        return "Happy Cinco de Mayo!";
+      }
+      
+      else if ((year) == 2022 && month == 11 && (day > 18 && day < 23)) {
         return "Happy Hanukkah!";
       } else if ((year) == 2023 && month == 11 && (day > 7 && day < 15)) {
         return "Happy Hanukkah!";
@@ -690,73 +694,78 @@ window.onload = function() {
     if (buttonnumber > 5) {
       buttonnumber = 0;
     }
-    
 
-        //Button to control Clock
+
+    //Button to control Clock
     if (day > 31) {
-      buttonDaynumber = 0;
+      buttonDaynumber = -10;
+      
     }
-    
-        //Button to control Clock
+
+    //Button to control Clock
     if (month > 11) {
-      buttonMonthnumber = 0;
-    }
     
-        //Button to control Clock
+      buttonMonthnumber = -10;
+    }
+
+    //Button to control Clock
     if (year > 2029) {
+    
       buttonYearnumber = 0;
     }
 
-buttonM.onclick = function() {
+    buttonM.onclick = function() {
       buttonMonthnumber++;
       
-     };
+    };
 
-buttonD.onclick = function() {
+    buttonD.onclick = function() {
       buttonDaynumber++;
-      
-     };
 
-buttonY.onclick = function() {
+    };
+
+    buttonY.onclick = function() {
       buttonYearnumber++;
-      
-     };
-     
-    button.onclick = function() {
-      buttonnumber ++;};
 
-      if (buttonnumber == 1) {
-        button.innerHTML = getAlmanac() + " : " + monthNames[month] + " " + getFullMoonDate();
-      } else if (buttonnumber == 2) {
-        button.innerHTML = "Zodiac: " + getHoroscope();
-      } else if (buttonnumber == 4) {
-        button.innerHTML = Holiday();
-      } else if (buttonnumber == 5) {
-        button.innerHTML = "Moon Phase: " + moonNames[getMoonPhase(year, month, day)];
-      }
-       else if (buttonnumber == 3) {
-        button.innerHTML = planetnews();
-      }
-      
-      else {
-        button.innerHTML = "Try it!";
-      }
-    
+    };
+
+    button.onclick = function() {
+      buttonnumber++;
+    };
+
+    if (buttonnumber == 1) {
+      button.innerHTML = getAlmanac() + " : " + monthNames[month] + " " + getFullMoonDate();
+    } else if (buttonnumber == 2) {
+      button.innerHTML = "Zodiac: " + getHoroscope();
+    } else if (buttonnumber == 4) {
+      button.innerHTML = Holiday();
+    } else if (buttonnumber == 5) {
+      button.innerHTML = "Moon Phase: " + moonNames[getMoonPhase(year, month, day)];
+    } else if (buttonnumber == 3) {
+      button.innerHTML = planetnews();
+    } else {
+      button.innerHTML = "Try it!";
+    }
+
 
     if (buttonnumber == 1) {
       star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/" + month + ".png?raw=true')";
     } else if (buttonnumber == 2) {
       star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/" + astro + ".png?raw=true')";
     } else if (buttonnumber == 4) {
-      if (month == 11 && Holiday() =="Happy Hanukkah!") {
+      if (Holiday() == "Happy Hanukkah!") {
         if (sec % 2 == 0) {
-          star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/copyright12.png?raw=true')";
-        } else {
+          star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/copyright12.png?raw=true')";} else {
           star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/copyright12s1.png?raw=true')";
-        }
-
-      } else {
-
+        }}
+ 
+ else if (Holiday() == "Happy Lunar New Year!") {
+          star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/13" + sec % 2 + ".png?raw=true')";
+        } else if (Holiday() == "Happy Cinco de Mayo!") {
+           star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/14" + sec % 2 + ".png?raw=true')"
+        } else if (Holiday() == "Happy Fourth of July!") {
+          star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/15" + sec % 2 + ".png?raw=true')"; } 
+ else {
         if (sec % 2 == 0) {
           star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/copyright" + month + ".png?raw=true')";
         } else {
@@ -765,13 +774,9 @@ buttonY.onclick = function() {
       }
     } else if (buttonnumber == 5) {
       star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/moon" + getMoonPhase(year, month, day) + ".png?raw=true')";
-    }
-    else if (buttonnumber == 3) {
+    } else if (buttonnumber == 3) {
       star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/" + planetType() + ".png?raw=true')";
-    }
-    
-    
-    else {
+    } else {
       star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/" + min % 10 + "star" + sec % 2 + ".png?raw=true')";
     }
 
