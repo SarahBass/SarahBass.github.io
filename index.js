@@ -688,12 +688,12 @@ window.onload = function() {
         button.innerHTML = getAlmanac() + " : " + monthNames[month] + " " + getFullMoonDate();
       } else if (buttonnumber == 2) {
         button.innerHTML = "Zodiac: " + getHoroscope();
-      } else if (buttonnumber == 3) {
-        button.innerHTML = Holiday();
       } else if (buttonnumber == 4) {
+        button.innerHTML = Holiday();
+      } else if (buttonnumber == 5) {
         button.innerHTML = "Moon Phase: " + moonNames[getMoonPhase(year, month, day)];
       }
-       else if (buttonnumber == 5) {
+       else if (buttonnumber == 3) {
         button.innerHTML = planetnews();
       }
       
@@ -706,7 +706,7 @@ window.onload = function() {
       star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/" + month + ".png?raw=true')";
     } else if (buttonnumber == 2) {
       star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/" + astro + ".png?raw=true')";
-    } else if (buttonnumber == 3) {
+    } else if (buttonnumber == 4) {
       if (month == 11 && (day > 7 || day < 15)) {
         if (sec % 2 == 0) {
           star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/copyright12.png?raw=true')";
@@ -722,10 +722,10 @@ window.onload = function() {
           star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/copyright" + month + "s1.png?raw=true')";
         }
       }
-    } else if (buttonnumber == 4) {
+    } else if (buttonnumber == 5) {
       star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/moon" + getMoonPhase(year, month, day) + ".png?raw=true')";
     }
-    else if (buttonnumber == 5) {
+    else if (buttonnumber == 3) {
       star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/" + planetType() + ".png?raw=true')";
     }
     
