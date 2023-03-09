@@ -445,7 +445,43 @@ window.onload = function() {
         return "Happy Lunar New Year!";
       } else if (month == 1 && day == 2 && year == 2030) {
         return "Happy Lunar New Year!";
-      } else if (month == 3 && day == 17 && year == 2022) {
+      } else if (month == 5 && day == 19 && year == 2022) {
+    return "Happy Father's Day!";
+  } else if (month == 5 && day == 18 && year == 2023) {
+    return "Happy Father's Day!";
+  } else if (month == 5 && day == 16 && year == 2024) {
+    return "Happy Father's Day!";
+  } else if (month == 5 && day == 15 && year == 2025) {
+    return "Happy Father's Day!";
+  } else if (month == 5 && day == 21 && year == 2026) {
+    return "Happy Father's Day!";
+  } else if (month == 5 && day == 20 && year == 2027) {
+    return "Happy Father's Day!";
+  } else if (month == 5 && day == 18 && year == 2028) {
+    return "Happy Father's Day!";
+  } else if (month == 5 && day == 17 && year == 2029) {
+    return "Happy Father's Day!";
+  } else if (month == 5 && day == 16 && year == 2030) {
+    return "Happy Father's Day!";
+  } else if (month == 4 && day == 8 && year == 2022) {
+        return "Happy Mother's Day!";
+      } else if (month == 4 && day == 14 && year == 2023) {
+        return "Happy Mother's Day!";
+      } else if (month == 4 && day == 12 && year == 2024) {
+        return "Happy Mother's Day!";
+      } else if (month == 4 && day == 11 && year == 2025) {
+        return "Happy Mother's Day!";
+      } else if (month == 4 && day == 10 && year == 2026) {
+        return "Happy Mother's Day!";
+      } else if (month == 4 && day == 9 && year == 2027) {
+        return "Happy Mother's Day!";
+      } else if (month == 4 && day == 14 && year == 2028) {
+        return "Happy Mother's Day!";
+      } else if (month == 4 && day == 13 && year == 2029) {
+        return "Happy Mother's Day!";
+      } else if (month == 4 && day == 12 && year == 2030) {
+        return "Happy Mother's Day!";
+      }else if (month == 3 && day == 17 && year == 2022) {
         return "Happy Easter!";
       } else if (month == 3 && day == 9 && year == 2023) {
         return "Happy Easter!";
@@ -471,6 +507,12 @@ window.onload = function() {
         return "Happy Halloween!";
       } else if (month == 11 && day == 25) {
         return "Merry Christmas!";
+      }else if (month == 1 && day == 14) {
+        return "Happy Valentine's Day!";
+      }else if (month == 6 && day == 19) {
+        return "Celebrate Juneteenth!";
+      }else if (month == 10 && day == 11) {
+        return "Happy Veterans Day!";
       } else if (month == 11 && day == 24) {
         return "Merry Christmas Eve!";
       } else if (month == 11 && day == 31) {
@@ -485,9 +527,9 @@ window.onload = function() {
         return "Happy St. Patrick's Day!";
       } else if (month == 4 && day == 5) {
         return "Happy Cinco de Mayo!";
-      }
-      
-      else if ((year) == 2022 && month == 11 && (day > 18 && day < 23)) {
+      }else if (month == 10 && day == 1) {
+        return "Happy Día de los Muertos!";
+      }else if ((year) == 2022 && month == 11 && (day > 18 && day < 23)) {
         return "Happy Hanukkah!";
       } else if ((year) == 2023 && month == 11 && (day > 7 && day < 15)) {
         return "Happy Hanukkah!";
