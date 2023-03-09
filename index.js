@@ -32,14 +32,14 @@ window.onload = function() {
     hr = d.getHours();
     min = d.getMinutes();
     sec = d.getSeconds();
-    month = d.getMonth();
-    day = d.getDate();
-    year = d.getFullYear();
+    month = d.getMonth()+buttonMonthnumber;
+    day = d.getDate()+buttonDaynumber;
+    year = d.getFullYear()+buttonYearnumber;
     week = d.getDay();
     astro = getHoroscope();
-    Daynumber = buttonDaynumber+day;
-    Monthnumber = buttonMonthnumber+month+1;
-    Yearnumber =  buttonYearnumber+year;
+     buttonY.innerHTML = (year);
+     buttonD.innerHTML = (day);
+     buttonM.innerHTML = (month+1);
     
 
     function getHoroscope() {
@@ -693,37 +693,38 @@ window.onload = function() {
     
 
         //Button to control Clock
-    if (Daynumber > 26) {
+    if (day > 31) {
       buttonDaynumber = 0;
     }
     
         //Button to control Clock
-    if (Monthnumber > 11) {
+    if (month > 11) {
       buttonMonthnumber = 0;
     }
     
         //Button to control Clock
-    if (Yearnumber > 2029) {
+    if (year > 2029) {
       buttonYearnumber = 0;
     }
 
 buttonM.onclick = function() {
-      buttonMonthnumber += 1;
-      buttonM.innerHTML = Monthnumber;
+      buttonMonthnumber++;
+      
      };
 
 buttonD.onclick = function() {
-      buttonDaynumber += 1;
-      buttonD.innerHTML = Daynumber;
+      buttonDaynumber++;
+      
      };
 
 buttonY.onclick = function() {
-      buttonYearnumber += 1;
-      buttonY.innerHTML = Yearnumber;
+      buttonYearnumber++;
+      
      };
-
+     
     button.onclick = function() {
-      buttonnumber += 1;
+      buttonnumber ++;};
+
       if (buttonnumber == 1) {
         button.innerHTML = getAlmanac() + " : " + monthNames[month] + " " + getFullMoonDate();
       } else if (buttonnumber == 2) {
@@ -738,9 +739,9 @@ buttonY.onclick = function() {
       }
       
       else {
-        button.innerHTML = "Clock Showing :  <" + hr + ":" + min + ":" + sec + ">";
+        button.innerHTML = "Try it!";
       }
-    };
+    
 
     if (buttonnumber == 1) {
       star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/" + month + ".png?raw=true')";
