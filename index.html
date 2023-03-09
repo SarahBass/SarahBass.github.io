@@ -34,7 +34,7 @@
 		}
 
 		.bee-page-container {
-			background-image: url("https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/951664_936160/Untitled%2074.png");
+			background-image: none;
 			background-position: top left;
 			background-repeat: no-repeat
 		}
@@ -95,6 +95,29 @@
 			flex-basis: 100%
 		}
 
+		.bee-background-video-container,
+		.bee-iframe-video-container {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+			pointer-events: none
+		}
+
+		.bee-background-video-container iframe,
+		.bee-iframe-video-container iframe {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100vw;
+			height: 56.25vw;
+			min-height: 100vh;
+			min-width: 177.77vh
+		}
+
 		.bee-button .content {
 			text-align: center
 		}
@@ -121,8 +144,7 @@
 		.bee-row-12 .bee-col-1 .bee-block-1,
 		.bee-row-12 .bee-col-2 .bee-block-1,
 		.bee-row-12 .bee-col-3 .bee-block-1,
-		.bee-row-14 .bee-col-4 .bee-block-1,
-		.bee-row-4 .bee-col-3 .bee-block-1 {
+		.bee-row-14 .bee-col-4 .bee-block-1 {
 			width: 100%
 		}
 
@@ -264,7 +286,7 @@
 			padding: 5px 30px
 		}
 
-		.bee-row-5 .bee-col-1 .bee-block-1 {
+		.bee-row-5 .bee-col-1 .bee-block-2 {
 			padding-bottom: 30px
 		}
 
@@ -373,11 +395,14 @@
 			text-align: center
 		}
 
-		.bee-row-6 .bee-col-2 .bee-block-1 {
-			color: #3c3c3c;
+		.bee-row-10 .bee-col-1 .bee-block-1,
+		.bee-row-5 .bee-col-1 .bee-block-2,
+		.bee-row-7 .bee-col-1 .bee-block-1 {
+			color: #393d47;
 			direction: ltr;
-			font-size: 16px;
-			font-weight: 400;
+			font-family: "Roboto Slab", Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 70px;
+			font-weight: 700;
 			letter-spacing: 0;
 			line-height: 120%;
 			text-align: center
@@ -396,7 +421,7 @@
 		.bee-row-12 .bee-col-2 .bee-block-3 a,
 		.bee-row-12 .bee-col-3 .bee-block-2 a,
 		.bee-row-12 .bee-col-3 .bee-block-3 a,
-		.bee-row-5 .bee-col-1 .bee-block-1 a,
+		.bee-row-5 .bee-col-1 .bee-block-2 a,
 		.bee-row-6 .bee-col-2 .bee-block-1 a,
 		.bee-row-7 .bee-col-1 .bee-block-1 a,
 		.bee-row-8 .bee-col-2 .bee-block-2 a,
@@ -419,7 +444,7 @@
 		.bee-row-12 .bee-col-2 .bee-block-3 p:not(:last-child),
 		.bee-row-12 .bee-col-3 .bee-block-2 p:not(:last-child),
 		.bee-row-12 .bee-col-3 .bee-block-3 p:not(:last-child),
-		.bee-row-5 .bee-col-1 .bee-block-1 p:not(:last-child),
+		.bee-row-5 .bee-col-1 .bee-block-2 p:not(:last-child),
 		.bee-row-6 .bee-col-2 .bee-block-1 p:not(:last-child),
 		.bee-row-7 .bee-col-1 .bee-block-1 p:not(:last-child),
 		.bee-row-8 .bee-col-2 .bee-block-2 p:not(:last-child),
@@ -429,14 +454,11 @@
 			margin-bottom: 16px
 		}
 
-		.bee-row-10 .bee-col-1 .bee-block-1,
-		.bee-row-5 .bee-col-1 .bee-block-1,
-		.bee-row-7 .bee-col-1 .bee-block-1 {
-			color: #393d47;
+		.bee-row-6 .bee-col-2 .bee-block-1 {
+			color: #3c3c3c;
 			direction: ltr;
-			font-family: "Roboto Slab", Arial, "Helvetica Neue", Helvetica, sans-serif;
-			font-size: 70px;
-			font-weight: 700;
+			font-size: 16px;
+			font-weight: 400;
 			letter-spacing: 0;
 			line-height: 120%;
 			text-align: center
@@ -496,7 +518,7 @@
 
 			.bee-row-10 .bee-col-1 .bee-block-1,
 			.bee-row-4 .bee-col-2 .bee-block-2 h1,
-			.bee-row-5 .bee-col-1 .bee-block-1,
+			.bee-row-5 .bee-col-1 .bee-block-2,
 			.bee-row-7 .bee-col-1 .bee-block-1 {
 				font-size: 60px !important
 			}
@@ -641,12 +663,13 @@
 <div class="spacer" style="height:20px;"></div>
 </div>
 <div class="bee-block bee-block-2 bee-heading">
-<h1 style="color:#ffffff;direction:ltr;font-family:'Roboto Slab', Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:90px;font-weight:700;letter-spacing:normal;line-height:100%;text-align:left;margin-top:0;margin-bottom:0;"><span class="tinyMce-placeholder">Power up pets with steps!</span> </h1>
+<h1 style="color:#ffffff;direction:ltr;font-family:'Roboto Slab', Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:90px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;"><span class="tinyMce-placeholder">Power up pets with steps!</span> </h1>
 </div>
 </div>
 <div class="bee-col bee-col-3 bee-col-w6">
 <div class="bee-block bee-block-1 bee-spacer">
 <div class="spacer" style="height:60px;"></div>
+</div>
 </div>
 </div>
 </div>
