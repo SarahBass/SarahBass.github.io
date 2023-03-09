@@ -3,23 +3,23 @@ Virtual Star Studios Website
 
 Link : https://sarahbass.github.io/
 
-**Includes a Javascript Clock**
+** Includes a Insane Javascript Clock **
 
-Features:
+Clock Features:
 
-Farmer's Almanac Moon
+Farmer's Almanac Moon Accurate 2022-2030 using 8 years of Full Moon Data
 
-Zodiac Sign
+Zodiac Sign Calculator
 
-Date and Time Stamp
+Javascript Date and Time Stamp
 
-Animated Clock
+Javascript Animated Analog Clock with Character that changes Every Minute for 10 minutes
 
-Analog Clock
+Holiday Message or Today's Date Accurate 2022-2030 using 8 years of data
 
-Holiday Message
+Moon Phase Calculator
 
-Moon Phase
+8 years of Planet, Solstice, and Equinox Data to generate an accurate Space News Update for 2022-2030
 
  2022 - 2023 © Sarah Bass  All Rights Reserved
 
