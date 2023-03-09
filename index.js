@@ -483,23 +483,23 @@ window.onload = function() {
         return "May the 4th be with you!";
       } else if (month == 3 && day == 17) {
         return "Happy St. Patrick's Day!";
-      } else if ((year) == 2022 && month == 11 && (day > 18 || day < 23)) {
+      } else if ((year) == 2022 && month == 11 && (day > 18 && day < 23)) {
         return "Happy Hanukkah!";
-      } else if ((year) == 2023 && month == 11 && (day > 7 || day < 15)) {
+      } else if ((year) == 2023 && month == 11 && (day > 7 && day < 15)) {
         return "Happy Hanukkah!";
-      } else if ((year) == 2024 && month == 11 && (day > 26 || day < 30)) {
+      } else if ((year) == 2024 && month == 11 && (day > 26 && day < 30)) {
         return "Happy Hanukkah!";
-      } else if ((year) == 2025 && month == 11 && (day > 14 || day < 22)) {
+      } else if ((year) == 2025 && month == 11 && (day > 14 && day < 22)) {
         return "Happy Hanukkah!";
-      } else if ((year) == 2026 && month == 11 && (day > 4 || day < 12)) {
+      } else if ((year) == 2026 && month == 11 && (day > 4 && day < 12)) {
         return "Happy Hanukkah!";
-      } else if ((year) == 2027 && month == 11 && (day > 26 || day < 30)) {
+      } else if ((year) == 2027 && month == 11 && (day > 26 && day < 30)) {
         return "Happy Hanukkah!";
-      } else if ((year) == 2028 && month == 11 && (day > 12 || day < 20)) {
+      } else if ((year) == 2028 && month == 11 && (day > 12 && day < 20)) {
         return "Happy Hanukkah!";
-      } else if ((year) == 2029 && month == 11 && (day > 1 || day < 9)) {
+      } else if ((year) == 2029 && month == 11 && (day > 1 && day < 9)) {
         return "Happy Hanukkah!";
-      } else if ((year) == 2030 && month == 11 && (day > 20 || day < 23)) {
+      } else if ((year) == 2030 && month == 11 && (day > 20 && day < 23)) {
         return "Happy Hanukkah!";
       } else {
         return "Today is " + dayNames[week] + " , " + monthNames[month] + " " + day + " " + year;
@@ -748,7 +748,7 @@ buttonY.onclick = function() {
     } else if (buttonnumber == 2) {
       star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/" + astro + ".png?raw=true')";
     } else if (buttonnumber == 4) {
-      if (month == 11 && (day > 7 || day < 15)) {
+      if (month == 11 && Holiday() =="Happy Hanukkah!") {
         if (sec % 2 == 0) {
           star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/copyright12.png?raw=true')";
         } else {
