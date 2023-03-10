@@ -807,6 +807,18 @@ window.onload = function() {
            star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/14" + sec % 2 + ".png?raw=true')"
         } else if (Holiday() == "Happy Fourth of July!") {
           star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/15" + sec % 2 + ".png?raw=true')"; } 
+else if (Holiday() == "Happy Easter!") {
+          star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/16" + sec % 2 + ".png?raw=true')"; } 
+else if (Holiday() == "Happy St. Patrick's Day!") {
+          star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/17" + sec % 2 + ".png?raw=true')"; } 
+else if (Holiday() == "Happy Father's Day!") {
+          star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/18" + sec % 2 + ".png?raw=true')"; }    
+else if (Holiday() == "Happy Mother's Day!") {
+          star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/19" + sec % 2 + ".png?raw=true')"; }   
+ else if (Holiday() == "Happy Valentine's Day!") {
+          star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/20" + sec % 2 + ".png?raw=true')"; }   
+else if (Holiday() == "Happy Día de los Muertos!") {
+          star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/21" + sec % 2 + ".png?raw=true')"; }           
  else {
         if (sec % 2 == 0) {
           star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/copyright" + month + ".png?raw=true')";
