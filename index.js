@@ -821,7 +821,12 @@ else if (Holiday() == "Happy Día de los Muertos!") {
           star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/21" + sec % 2 + ".png?raw=true')"; }  
  else if (Holiday() == "Happy New Year's Eve!" || Holiday() == "Happy New Year!") {
           star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/22" + sec % 2 + ".png?raw=true')"; }            
- else {
+ else if (Holiday() == "Happy Thanksgiving!") {
+          star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/23" + sec % 2 + ".png?raw=true')"; }            
+ else if (Holiday() == "Happy Halloween!") {
+          star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/24" + sec % 2 + ".png?raw=true')"; }            
+ 
+      else {
         if (sec % 2 == 0) {
           star.style.backgroundImage = "url('https://github.com/SarahBass/SarahBass.github.io/blob/main/images/copyright" + month + ".png?raw=true')";
         } else {
