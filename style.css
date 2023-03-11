@@ -6,7 +6,10 @@
 #star {
 
   position: absolute;
-  
+   display: block;
+  margin-left: 13vw;
+  margin-right: 13vw;
+  width: 50%;
   height: 70vw;
   width: 70vw;
 
@@ -52,3 +55,4 @@ background: url(https://raw.githubusercontent.com/SarahBass/SarahBass.github.io/
 
 
 }
+
