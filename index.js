@@ -509,7 +509,7 @@ window.onload = function() {
         return "Merry Christmas!";
       }else if (month == 1 && day == 14) {
         return "Happy Valentine's Day!";
-      }else if (month == 6 && day == 19) {
+      }else if (month == 5 && day == 19) {
         return "Celebrate Juneteenth!";
       }else if (month == 10 && day == 11) {
         return "Happy Veterans Day!";
