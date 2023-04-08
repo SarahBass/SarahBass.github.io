@@ -3,7 +3,7 @@ Virtual Star Studios Website
 
 Link : https://sarahbass.github.io/
 
-** Includes a Insane Javascript Clock **
+** Includes an interactive Javascript Clock **
 
 Clock Features:
 
