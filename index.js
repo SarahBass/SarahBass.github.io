@@ -349,9 +349,9 @@ window.onload = function() {
 
       ++month;
 
-      c = 365.25 * year;
+      c = 365.2422 * year;
 
-      e = 30.6 * month;
+      e = 30.436875 * month;
 
       jd = c + e + day - 694039.09; //jd is total days elapsed
 
